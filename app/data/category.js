@@ -1,40 +1,42 @@
+import { Chrome, Code, Palette, FileImage, Type, Play } from 'lucide-react';
+
 const categories = [
   {
     id: "components",
-    name: "UI Components",
-    description: "Pre-built components so you can stop reinventing buttons and go live faster.",
-   
+    nameKey: "categories.components.name",
+    descriptionKey: "categories.components.description",
+    icon: <Code />,
   },
   {
     id: "colors",
-    name: "Colors & Palettes",
-    description: "Make your UI pop with gradients, palettes, and shades you didn’t know you needed.",
-   
+    nameKey: "categories.colors.name",
+    descriptionKey: "categories.colors.description",
+    icon: <Palette />,
   },
   {
     id: "fonts",
-    name: "Fonts",
-    description: "Typography that actually makes your site look designed — not just 'default Roboto'.",
-   
+    nameKey: "categories.fonts.name",
+    descriptionKey: "categories.fonts.description",
+    icon: <Type />,
   },
   {
     id: "icons",
-    name: "Icons",
-    description: "Crisp little visuals that say more than a paragraph ever could.",
-    
+    nameKey: "categories.icons.name",
+    descriptionKey: "categories.icons.description",
+    icon: <FileImage />,
   },
   {
     id: "animations",
-    name: "Animation Tools",
-    description: "Make your site feel alive (without frying your CPU). Scroll, bounce, zoom — all here.",
-    
+    nameKey: "categories.animations.name",
+    descriptionKey: "categories.animations.description",
+    icon: <Play />,
   },
   {
     id: "logos",
-    name: "Logo Makers",
-    description: "Need a logo but not a designer? These tools got your back. Look official in 5 mins.",
-    
-  }
+    nameKey: "categories.logos.name",
+    descriptionKey: "categories.logos.description",
+    icon: <Chrome />,
+  },
 ];
 
 export default categories;

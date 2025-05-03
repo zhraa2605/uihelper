@@ -1,0 +1,31 @@
+import React from 'react'
+import { ArrowRight } from 'lucide-react';
+
+const CategoryCard = ({ name, description, icon }) => {
+  return (
+    <div className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full">
+      {/* Card Header with Title and Icon */}
+      <div className="flex items-center gap-3 p-5 border-b border-gray-100">
+        <div className="p-2 rounded-lg bg-purple-100 text-purple-600">
+          {icon}
+        </div>
+        <h3 className="font-medium text-lg text-gray-900">{name}</h3>
+      </div>
+      
+      {/* Card Body with Description */}
+      <div className="p-5 flex-grow">
+        <p className="text-gray-600 text-sm">{description}</p>
+      </div>
+      
+      {/* Card Footer with Button */}
+      <div className="p-5 pt-0">
+        <button className="flex items-center gap-2 text-purple-600 font-medium text-sm hover:text-purple-800 transition-colors">
+          View Tools
+          <ArrowRight size={16} />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CategoryCard;
