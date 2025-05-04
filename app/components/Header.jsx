@@ -2,14 +2,14 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="border-b-2 border-gray-300 shadow-sm text-purple-900 bg-white z-10 p-4">
+    <header className="border-b-2 border-gray-200 z-10 p-4 w-full">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">UI Help</h1>
-          <div className="relative inline-block">
+          <h1 className="text-2xl font-bold text-purple-900">UI Help</h1>
+          {/* <div className="relative inline-block">
             <input
               placeholder="Search for a website,category..."
-              className="shadow-lg bg-white border-2 border-gray-400 focus:border-gray-700 px-5 py-2 rounded-xl w-90 transition-all focus:w-100 outline-none"
+              className="shadow-lg bg-white border border-gray-200 focus:border-gray-500 px-5 py-2 rounded-xl w-90 transition-all focus:w-100 outline-none"
               name="search"
               type="search"
             />
@@ -29,10 +29,10 @@ const Header = () => {
               ></path>
             </svg>
           </div>
-          <nav className="flex space-x-4">
+          {/* <nav className="flex space-x-4">
            
             <a href="#" >Contact</a>
-          </nav>
+          </nav> */} 
         </div>
       </div>
     </header>

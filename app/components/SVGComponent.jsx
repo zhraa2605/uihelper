@@ -36,9 +36,13 @@ export function InteractiveGridPattern({
             height={height}
             className={clsx(
               "stroke-gray-100 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
-              hoveredSquare === index ? "fill-gray-500" : "fill-transparent",
+              hoveredSquare === index ? "fill-purple-200" : "fill-transparent",
               squaresClassName
             )}
+            onMouseOver={() => setHoveredSquare(index)}
+            onMouseOut={() => setHoveredSquare(null)}
+            onTouchStart={() => setHoveredSquare(index)}
+            onTouchEnd={() => setHoveredSquare(null)}
             onMouseEnter={() => setHoveredSquare(index)}
             onMouseLeave={() => setHoveredSquare(null)}
           />
