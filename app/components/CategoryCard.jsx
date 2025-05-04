@@ -20,7 +20,11 @@ const CategoryCard = ({ name, description, icon }) => {
       {/* Card Footer with Button */}
       <div className="p-5 hover:px-7 duration-300 ">
         <button className="flex items-center gap-2 text-purple-600 font-medium text-sm hover:text-purple-800 transition-colors">
-          View Tools
+        <Link href={`/tools/${id}`}>
+        <a className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg inline-block">
+          Explore {name}
+        </a>
+      </Link>
           <ArrowRight size={16} />
         </button>
       </div>

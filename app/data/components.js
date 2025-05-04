@@ -1,119 +1,150 @@
-const componentLibraries = [
+const originalComponentLibraries
+= [
   {
     name: "Shadcn UI",
-    description: "A set of beautifully designed, customizable, open-source components.",
+    description: "Beautiful, customizable components you can easily tweak to match your style.",
     url: "https://ui.shadcn.com/",
     image: "https://ui.shadcn.com/og.jpg",
-    tech: ["React", "Tailwind CSS"],
+    tech: [
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   },
   {
     name: "Material UI",
-    description: "Popular React component library based on Google’s Material Design.",
+    description: "Ready-to-use React components with Google's clean, modern design style.",
     url: "https://mui.com/",
-    image: "https://mui.com/static/logo.png",
-    tech: ["React"],
-    requiresInstallation: true,
-    isFree: true
-  },
-  {
-    name: "PrimeNG",
-    description: "A full-featured UI component library for Angular apps.",
-    url: "https://primeng.org/",
-    image: "https://primefaces.org/cdn/primeng/images/primeng-logo-dark.svg",
-    tech: ["Angular"],
+    image: "/images/mui.png",
+    tech: [
+      { name: "React", icon: "/icons/react.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   },
   {
     name: "Preline UI",
-    description: "A free and open-source Tailwind CSS UI component collection.",
+    description: "Free Tailwind components that make building websites super quick.",
     url: "https://preline.co/",
-    image: "https://preline.co/images/preline-logo.svg",
-    tech: ["Tailwind CSS"],
+    image: "/images/preline.png",
+    tech: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   },
   {
     name: "HyperUI",
-    description: "Free Tailwind CSS UI components, ready to copy and paste.",
+    description: "Ready-to-grab Tailwind snippets - just copy, paste, and you're done!",
     url: "https://hyperui.dev/",
-    image: "https://hyperui.dev/favicon.svg",
-    tech: ["Tailwind CSS"],
+    image: "/images/hyper.png",
+    tech: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: false,
     isFree: true
   },
   {
     name: "Uiverse",
-    description: "A community-driven library of customizable components using CSS or Tailwind.",
+    description: "Grab cool buttons, cards, and more made by other developers using CSS or Tailwind.",
     url: "https://uiverse.io/",
-    image: "https://uiverse.io/favicon.ico",
-    tech: ["CSS", "Tailwind CSS"],
+    image: "/images/universe.png",
+    tech: [
+      { name: "CSS", icon: "/icons/css.svg" },
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: false,
     isFree: true
   },
   {
     name: "Magic UI",
-    description: "A component library focused on slick animations, built with React and Tailwind.",
+    description: "React components with eye-catching animations that make your site pop.",
     url: "https://magicui.design/",
-    image: "https://magicui.design/og-image.jpg",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    image: "/images/magic.png",
+    tech: [
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
+      { name: "Framer Motion", icon: "/icons/framer-motion.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   },
   {
     name: "Aceternity UI",
-    description: "Premium component packs and templates for building eye-catching websites.",
+    description: "Fancy components that'll make your website stand out from the crowd.",
     url: "https://ui.aceternity.com/",
-    image: "https://ui.aceternity.com/logo.png",
-    tech: ["Tailwind CSS", "React"],
+    image: "/images/ascternity.png",
+    tech: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
+      { name: "React", icon: "/icons/react.svg" }
+    ],
     requiresInstallation: true,
     isFree: false
   },
   {
     name: "Easy Frontend",
-    description: "A site full of tutorials and real-world examples to make learning frontend easier.",
+    description: "Learn by example with tons of real-world code snippets and tutorials.",
     url: "https://easyfrontend.com/",
-    image: "https://easyfrontend.com/images/logo.svg",
-    tech: ["HTML", "CSS", "JavaScript"],
+    image: "/images/easy.png",
+    tech: [
+      { name: "HTML", icon: "/icons/html.svg" },
+      { name: "CSS", icon: "/icons/css.svg" },
+      { name: "JavaScript", icon: "/icons/javascript.svg" }
+    ],
     requiresInstallation: false,
     isFree: true
   },
   {
     name: "DaisyUI",
-    description: "A Tailwind CSS plugin that gives you ready-made components for faster dev.",
+    description: "Tailwind plugin that gives you ready-made components so you can build faster.",
     url: "https://daisyui.com/",
-    image: "https://daisyui.com/images/daisyui-logo.svg",
-    tech: ["Tailwind CSS"],
+    image: "/images/daisy.png",
+    tech: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   },
   {
     name: "Tailwind UI",
-    description: "Professional-grade UI components built by the creators of Tailwind CSS.",
+    description: "Premium, polished components made by the Tailwind team themselves.",
     url: "https://tailwindui.com/",
-    image: "https://tailwindui.com/favicons/favicon-32x32.png",
-    tech: ["Tailwind CSS"],
+    image: "/images/tailwindui.png",
+    tech: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: true,
     isFree: false
   },
   {
     name: "Flowbite",
-    description: "Tailwind-based component library with dark mode and Figma design system support.",
+    description: "Tailwind components that work great in dark mode and come with Figma designs.",
     url: "https://flowbite.com/",
-    image: "https://flowbite.com/docs/images/logo.svg",
-    tech: ["Tailwind CSS"],
+    image: "/images/flowbite.png",
+    tech: [
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   },
   {
     name: "Headless UI",
-    description: "Unstyled, fully accessible UI components to pair with Tailwind CSS.",
+    description: "Bare-bones but accessible components you can style exactly how you want.",
     url: "https://headlessui.com/",
-    image: "https://headlessui.com/images/logo.svg",
-    tech: ["React", "Vue", "Tailwind CSS"],
+    image: "/images/headless.png",
+    tech: [
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Vue", icon: "/icons/vue.svg" },
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+    ],
     requiresInstallation: true,
     isFree: true
   }
 ];
+
+
+export const componentLibraries = originalComponentLibraries.map(lib => ({
+  ...lib,
+  categoryId: "components"
+}));

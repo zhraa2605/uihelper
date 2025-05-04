@@ -1,6 +1,6 @@
 import React from 'react';
-import LibraryCard from '@/app/components/ToolCard'; // Assuming ToolCard is used for rendering individual cards
-import { componentLibraries } from '@/app/data/components';
+import LibraryCard from './ToolCard'; // Assuming ToolCard is used for rendering individual cards
+import { componentLibraries } from '../data/components';
 import { useRouter } from 'next/router';
 
 const toolsGrid = ({ categoryId }) => {
