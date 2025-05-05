@@ -8,9 +8,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className=" text-gray-950 pt-16  bg-transparent relative overflow-hidden z-10">
-        <div className="absolute inset-0 z-0">
-               <InteractiveGridPattern />
+<footer className="text-gray-950 pt-16 bg-transparent relative overflow-hidden z-10">
+<div className="absolute inset-0 z-0">
+<InteractiveGridPattern className="opacity-80 bg-gradient-to-t from-opacity-100 to-opacity-0" />
              </div>
       <div className="max-w-7xl mx-auto p-4 py-10 sm:px-6 lg:px-8 z-10 relative">
         {/* Hero Section */}
