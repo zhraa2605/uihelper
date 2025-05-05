@@ -15,7 +15,7 @@ const Hero = () => {
           <p className="text-sm md:text-lg lg:text-xl text-gray-600 leading-snug tracking-wide font-extralight">
               Design smarter, not harder.
             </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-t from-purple-400 via-purple-600 to-purple-900  mb-3 leading-snug tracking-wide ">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 via-purple-600 to-purple-900  mb-3 leading-snug tracking-wide ">
             UI Helper — UI Help for Non-Designers
           </h1>
           <p className="text-sm md:text-lg lg:text-xl text-gray-600 mb-8 leading-snug tracking-wide font-extralight">

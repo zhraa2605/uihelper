@@ -1,9 +1,47 @@
+'use client';
+import { Download, Copy, Shield, HelpCircle, MoveRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
-const LibraryCard = ({ name, description, url, image, tech ,requiresInstallation  }) => {
+const LibraryCard = ({ name, description, url, image, tech ,installationType  }) => {
+  const [requiresInstallation, setRequiresInstallation] = useState(false);
+  
+  useEffect(() => {
+    // Check if installation is required o
+    setRequiresInstallation(installationType === "required" || installationType === "optional");
+  }, [installationType]);
+
+  // Render appropriate icon based on installation type
+  const renderIcon = () => {
+    switch (installationType) {
+      case "required":
+        return <Download className="h-5 w-5 text-blue-500 mr-2" />;
+      case "optional":
+        return <Shield className="h-5 w-5 text-green-500 mr-2" />;
+      case "copy-paste":
+        return <Copy className="h-5 w-5 text-purple-500 mr-2" />;
+      default:
+        return <HelpCircle className="h-5 w-5 text-gray-500 mr-2" />;
+    }
+  };
+
+  const renderText = () => {
+    switch (installationType) {
+      case "required":
+        return "Installation Required";
+      case "optional":
+        return "Choose to Install or Copy Code";
+      case "copy-paste":
+        return "Copy/Paste Code";
+      default:
+        return "Unknown";
+    }
+  };
+
+
   return (
-    <div className=" rounded-2xl overflow-hidden shadow-md border border-white/[0.1]">
+    
+    <div className="rounded-2xl overflow-hidden shadow-md border border-white/[0.1]">
       <div className="relative h-56 w-full overflow-hidden">
-       
         <img
           src={image}
           alt={name}
@@ -13,7 +51,7 @@ const LibraryCard = ({ name, description, url, image, tech ,requiresInstallation
 
 
       <div className="p-5 text-black">
-         {/* Title and Free/Paid badge */}
+         {/* Title and desc */}
           <div className="flex justify-between items-center mb-3">
             <h2 className="text-xl font-bold text-gray-800">{name}</h2>
           </div>
@@ -21,19 +59,18 @@ const LibraryCard = ({ name, description, url, image, tech ,requiresInstallation
 
 
         <div className="flex items-center text-sm text-gray-500 my-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-500 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            <span>
-              {requiresInstallation ? ' Installation Required' : 'No Installation Required'}
-            </span>
-          </div>
+      {renderIcon()}
+      <span>{renderText()}</span>
+    </div>
+  
 
-
+        {/* Tech icons and link to website */}
 
         <div className="flex items-center justify-between mt-6">
-          <div className="flex items-center">
-            {tech.map((t, i) => (
+          {/* Tech icons */}
+          <div className="flex items-center transition-all duration-400 gap-0 hover:gap-1">
+
+          {(tech || []).map((t, i) => (
               <div
                 key={i}
                 className="w-10 h-10 bg-black border border-white/[.2] rounded-full flex justify-center items-center -ml-2 cursor-pointer"
@@ -44,13 +81,15 @@ const LibraryCard = ({ name, description, url, image, tech ,requiresInstallation
             ))}
           </div>
 
+          {/* Link to website */}
+
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-purple dark:text-purple-dark text-sm hover:underline"
+            className="flex items-center text-gray-800 hover:text-purple-900 hover:me-2 duration-300  text-sm"
           >
-            Check Site 
+            Check Site <MoveRight className="h-4 w-4 ms-2" />
           </a>
         </div>
       </div>
