@@ -13,7 +13,7 @@ const CategoryGrid = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map((category) => (
           <CategoryCard
-           id={category.id}
+           categoryId={category.id}
             key={category.name}
             name={category.name}
             description={category.description || 'No description provided'}

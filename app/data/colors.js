@@ -5,6 +5,7 @@ const originalColorTools = [
       url: "https://www.shecodes.io/color-palettes",
       image: "/images/shecodes.png",
       installationType: "copy-paste",
+      tags: ["Free"],
       isFree: true
     },
     {
@@ -21,6 +22,7 @@ const originalColorTools = [
       url: "https://uicolors.app/",
       image: "/images/uicolors.png",
       installationType: "copy-paste",
+      
       isFree: true
     },
     {
