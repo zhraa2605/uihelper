@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "@/app/components/Header";
 import "./globals.css";
+import ThemeToggle from "./components/ThemeToggle";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"], // Adjust weights as needed
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         className={`${inter.className} antialiased`}
       >
             <Header />
+
 
         {children}
       </body>

@@ -1,6 +1,6 @@
 "use client";
 
-import { clsx } from "clsx";
+import { clsx } from "clsx"; 
 import React, { useState } from "react";
 
 export function InteractiveGridPattern({
@@ -13,7 +13,7 @@ export function InteractiveGridPattern({
 }) {
   const [horizontal, vertical] = squares;
   const [hoveredSquare, setHoveredSquare] = useState(null);
-
+  
   return (
     <svg
       width={width * horizontal}
@@ -35,8 +35,10 @@ export function InteractiveGridPattern({
             width={width}
             height={height}
             className={clsx(
-              "stroke-gray-100 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
-              hoveredSquare === index ? "fill-purple-200" : "fill-transparent",
+              "stroke-gray-100 dark:stroke-gray-700 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
+              hoveredSquare === index 
+                ? "fill-purple-200 dark:fill-purple-900" 
+                : "fill-transparent",
               squaresClassName
             )}
             onMouseOver={() => setHoveredSquare(index)}

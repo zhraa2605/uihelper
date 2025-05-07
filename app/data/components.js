@@ -1,7 +1,7 @@
 const originalComponentLibraries = [
   {
     name: "Shadcn UI",
-    description: "Beautiful, customizable components you can easily tweak to match your style.",
+    description: "A collection of pre-built, themeable React + Tailwind components — super easy to customize and fits perfectly with modern stacks.",
     url: "https://ui.shadcn.com/",
     image: "https://ui.shadcn.com/og.jpg",
     tech: [
@@ -15,7 +15,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Material UI",
-    description: "Ready-to-use React components with Google's clean, modern design style.",
+    description: "A set of polished React components that follow Google's Material Design — great for dashboards or clean UIs.",
     url: "https://mui.com/",
     image: "/images/mui.png",
     tech: [
@@ -27,7 +27,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Preline UI",
-    description: "Free Tailwind components that make building websites super quick.",
+    description: "A growing library of Tailwind components — plug-and-play pieces to help you ship faster without starting from scratch.",
     url: "https://preline.co/",
     image: "/images/preline.png",
     tech: [
@@ -39,7 +39,7 @@ const originalComponentLibraries = [
   },
   {
     name: "HyperUI",
-    description: "Ready-to-grab Tailwind snippets - just copy, paste, and you're done!",
+    description: "Free, ready-made Tailwind components — just copy, paste, and get on with your life.",
     url: "https://hyperui.dev/",
     image: "/images/hyper.png",
     tech: [
@@ -51,7 +51,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Uiverse",
-    description: "Grab cool buttons, cards, and more made by other developers using CSS or Tailwind.",
+    description: "A community-driven collection of fun and creative components — mostly buttons, cards, and effects made with CSS or Tailwind.",
     url: "https://uiverse.io/",
     image: "/images/universe.png",
     tech: [
@@ -64,7 +64,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Magic UI",
-    description: "React components with eye-catching animations that make your site pop.",
+    description: "Flashy and animated React + Tailwind components — perfect if you want your UI to actually impress people.",
     url: "https://magicui.design/",
     image: "/images/magic.png",
     tech: [
@@ -78,7 +78,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Aceternity UI",
-    description: "Fancy components that'll make your website stand out from the crowd.",
+    description: "Modern, stylish React + Tailwind components that stand out. Packed with eye-catching designs.",
     url: "https://ui.aceternity.com/",
     image: "/images/ascternity.png",
     tech: [
@@ -91,7 +91,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Easy Frontend",
-    description: "Learn by example with tons of real-world code snippets and tutorials.",
+    description: "Like a playground of HTML/CSS/JS code snippets with real-world use cases — awesome for learning or building fast.",
     url: "https://easyfrontend.com/",
     image: "/images/easy.png",
     tech: [
@@ -105,7 +105,7 @@ const originalComponentLibraries = [
   },
   {
     name: "DaisyUI",
-    description: "Tailwind plugin that gives you ready-made components so you can build faster.",
+    description: "Adds styled components to Tailwind with themes built-in — no more manual class juggling for buttons and inputs.",
     url: "https://daisyui.com/",
     image: "/images/daisy.png",
     tech: [
@@ -117,7 +117,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Tailwind UI",
-    description: "Premium, polished components made by the Tailwind team themselves.",
+    description: "Premium components made by the Tailwind team. Super polished, but comes with a price tag.",
     url: "https://tailwindui.com/",
     image: "/images/tailwindui.png",
     tech: [
@@ -129,7 +129,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Flowbite",
-    description: "Tailwind components that work great in dark mode and come with Figma designs.",
+    description: "Tailwind components with a focus on accessibility and dark mode. Bonus: they come with matching Figma files.",
     url: "https://flowbite.com/",
     image: "/images/flowbite.png",
     tech: [
@@ -141,7 +141,7 @@ const originalComponentLibraries = [
   },
   {
     name: "Headless UI",
-    description: "Bare-bones but accessible components you can style exactly how you want.",
+    description: "Unstyled but super accessible UI components — great if you want full control over styling using Tailwind.",
     url: "https://headlessui.com/",
     image: "/images/headless.png",
     tech: [
