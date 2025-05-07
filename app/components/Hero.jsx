@@ -3,7 +3,7 @@ import { InteractiveGridPattern } from "./SVGComponent";
 
 const Hero = () => {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden  transition-colors duration-300">
       {/* Background SVG inside and behind */}
       <div className="absolute inset-0 z-0">
         <InteractiveGridPattern />
@@ -17,7 +17,7 @@ const Hero = () => {
           <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-snug tracking-wide font-extralight">
             Design smarter, not harder.
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 via-purple-600 to-purple-900 dark:bg-gradient-to-bl dark:from-purple-300 dark:to-purple-500 mb-3 leading-snug tracking-wide">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 via-purple-600 to-purple-900 dark:bg-gradient-to-bl dark:from-purple-100 dark:to-purple-200  mb-3 leading-snug tracking-wide">
             UI Helper — UI Help for Non-Designers
           </h1>
           <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-snug tracking-wide font-extralight">

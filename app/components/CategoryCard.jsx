@@ -4,16 +4,16 @@ import { ArrowRight } from 'lucide-react';
 
 const CategoryCard = ({ categoryId, name, description, icon }) => {
   return (
-    <div className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-      <div className="flex items-center gap-3 p-5 border-b border-gray-100 ">
-        <div className="p-2 rounded-lg bg-purple-100 text-purple-600">
+    <div className="bg-white dark:bg-transparent rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full dark:shadow-gray-500">
+      <div className="flex items-center gap-3 p-5 border-b border-gray-100 dark:border-gray-700 ">
+        <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-100">
           {icon}
         </div>
-        <h3 className="font-bold text-lg text-gray-900">{name}</h3>
+        <h3 className="font-bold text-lg text-gray-900 dark:text-gray-50">{name}</h3>
       </div>
 
       <div className="p-5 flex-grow">
-        <p className="text-gray-700 text-sm md:text-md">{description}</p>
+        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-md">{description}</p>
       </div>
 
       <div className="p-5 duration-300">

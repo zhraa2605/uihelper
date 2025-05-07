@@ -26,7 +26,14 @@
   --color-primary-text:#111827;
   --color-secondary-text:#4b5563;
   --color-muted-text:#6b7280;
+  --color-dark-color:#06091f;
+  
+
   
 
 }
-
+@layer base {
+  html {
+    @apply   dark:bg-[#06091f] dark:text-gray-50;
+}
+}

@@ -35,7 +35,7 @@ export function InteractiveGridPattern({
             width={width}
             height={height}
             className={clsx(
-              "stroke-gray-100 dark:stroke-gray-700 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
+              "stroke-gray-100 dark:stroke-gray-900  ease-in-out [&:not(:hover)]:duration-1000",
               hoveredSquare === index 
                 ? "fill-purple-200 dark:fill-purple-900" 
                 : "fill-transparent",
