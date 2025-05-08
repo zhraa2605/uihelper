@@ -2,11 +2,11 @@
 import { Download, Copy, Shield, HelpCircle, MoveRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const LibraryCard = ({ name, description, url, image, tech ,installationType  }) => {
+const LibraryCard = ({ name, description, url, image, tech, installationType }) => {
   const [requiresInstallation, setRequiresInstallation] = useState(false);
   
   useEffect(() => {
-    // Check if installation is required o
+    // Check if installation is required
     setRequiresInstallation(installationType === "required" || installationType === "optional");
   }, [installationType]);
 
@@ -37,57 +37,56 @@ const LibraryCard = ({ name, description, url, image, tech ,installationType  })
     }
   };
 
-
   return (
-    
-    <div className="rounded-2xl overflow-hidden shadow-md border border-white/[0.1]">
+    <div className="rounded-2xl overflow-hidden shadow-md border border-white/[0.1] flex flex-col h-full dark:bg-[#00020F]">
       <div className="relative h-56 w-full overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 h-full object-contain"
+          className="absolute bottom-0 z-10 h-full w-full object-contain"
         />
       </div>
 
-
-      <div className="p-5 text-black">
-         {/* Title and desc */}
+      <div className="p-5 text-black dark:text-white flex flex-col flex-1">
+        {/* Card content wrapper - takes all available space */}
+        <div className="flex flex-col flex-1">
+          {/* Title and desc */}
           <div className="flex justify-between items-center mb-3">
-            <h2 className="text-xl font-bold text-gray-800">{name}</h2>
+            <h2 className="text-xl font-bold text-gray-800 dark:text-gray-50">{name}</h2>
           </div>
-        <p className="text-md text-gray-800 mt-2 line-clamp-2">{description}</p>
+          
+          {/* Description with overflow handling */}
+          <div className="flex-1 overflow-auto">
+            <p className="text-md text-gray-800 dark:text-gray-100 mt-2">{description}</p>
+          </div>
+          
+          {/* Installation type - part of the footer */}
+          <div className="flex items-center text-sm text-gray-500 dark:text-gray-200 mt-4">
+            {renderIcon()}
+            <span>{renderText()}</span>
+          </div>
+        </div>
 
-
-        <div className="flex items-center text-sm text-gray-500 my-4">
-      {renderIcon()}
-      <span>{renderText()}</span>
-    </div>
-  
-
-        {/* Tech icons and link to website */}
-
-        <div className="flex items-center justify-between mt-6">
+        {/* Footer section - always at the bottom */}
+        <div className="flex items-center justify-between mt-6 pt-4 ">
           {/* Tech icons */}
           <div className="flex items-center transition-all duration-400 gap-0 hover:gap-1">
-
-          {(tech || []).map((t, i) => (
+            {(tech || []).map((t, i) => (
               <div
                 key={i}
                 className="w-10 h-10 bg-black border border-white/[.2] rounded-full flex justify-center items-center -ml-2 cursor-pointer"
-                >
-                  <img src={t.icon} alt={t.name} title={t.name} className="p-2" />
-            
+              >
+                <img src={t.icon} alt={t.name} title={t.name} className="p-2" />
               </div>
             ))}
           </div>
 
           {/* Link to website */}
-
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-gray-800 hover:text-purple-900 hover:me-2 duration-300  text-sm"
+            className="flex items-center text-gray-800 dark:text-gray-200 hover:text-purple-900 dark:hover:text-purple-300 hover:me-2 duration-300 text-sm"
           >
             Check Site <MoveRight className="h-4 w-4 ms-2" />
           </a>

@@ -1,9 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState('light');
-
+  const [isSpinning, setIsSpinning] = useState(false);
+  
   useEffect(() => {
     // On mount - get saved theme or system preference
     const saved = localStorage.getItem('theme');
@@ -12,20 +14,38 @@ export default function ThemeToggle() {
     setTheme(initial);
     document.documentElement.classList.toggle('dark', initial === 'dark');
   }, []);
-
+  
   const toggleTheme = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    document.documentElement.classList.toggle('dark', nextTheme === 'dark');
-    localStorage.setItem('theme', nextTheme);
+    setIsSpinning(true);
+    
+    // Wait for spin animation to reach halfway before changing the theme
+    setTimeout(() => {
+      const nextTheme = theme === 'dark' ? 'light' : 'dark';
+      setTheme(nextTheme);
+      document.documentElement.classList.toggle('dark', nextTheme === 'dark');
+      localStorage.setItem('theme', nextTheme);
+    }, 300); // Half of the animation duration
+    
+    // Reset spinning state after animation completes
+    setTimeout(() => {
+      setIsSpinning(false);
+    }, 600); // Full animation duration
   };
-
+  
   return (
     <button
       onClick={toggleTheme}
-      className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-800 text-sm"
+      className="p-2 rounded-full text-gray-900 dark:text-gray-100 transition-all duration-200"
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+      disabled={isSpinning}
     >
-      Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
+      <div className={isSpinning ? 'animate-spin' : ''}>
+        {theme === 'dark' ? (
+          <Sun className="h-5 w-5" />
+        ) : (
+          <Moon className="h-5 w-5" />
+        )}
+      </div>
     </button>
   );
 }

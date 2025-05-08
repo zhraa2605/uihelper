@@ -40,13 +40,13 @@ const categoryMap = {
 };
 
 const ToolsPage = async ({ params }) => {
-  const { categoryId } = params;
+  const { categoryId } = await params;
   const category = categoryMap[categoryId];
   console.log("Current categoryId:", categoryId);
 
   if (!category) {
     return (
-      <div className="text-center mt-20 text-gray-600 text-xl">
+      <div className="text-center mt-20 text-gray-600 dark:text-gray-200 text-x l">
         🚫 Unknown category: <strong>{categoryId}</strong>
       </div>
     );
@@ -55,11 +55,11 @@ const ToolsPage = async ({ params }) => {
   const { data, title, subtitle } = category;
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center leading-snug tracking-wider">
-        Explore <span className="text-color-4">{title}</span>
+    <div className="w-full max-w-7xl mx-auto px-4 py-8 ">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-2 text-center leading-snug tracking-wider">
+        Explore <span className="text-color-4 dark:text-purple-300">{title}</span>
       </h1>
-      <p className="text-gray-600 mb-8 text-center text-lg">{subtitle}</p>
+      <p className="text-gray-600 dark:text-gray-100 mb-8 text-center text-lg">{subtitle}</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data?.length > 0 ? (

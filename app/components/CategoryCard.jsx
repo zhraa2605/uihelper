@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const CategoryCard = ({ categoryId, name, description, icon }) => {
   return (
-    <div className="bg-white dark:bg-transparent rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full dark:shadow-gray-500">
+    <div className="bg-white dark:bg-[#000212] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col h-full dark:shadow-gray-500">
       <div className="flex items-center gap-3 p-5 border-b border-gray-100 dark:border-gray-700 ">
         <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-100">
           {icon}
@@ -13,13 +13,13 @@ const CategoryCard = ({ categoryId, name, description, icon }) => {
       </div>
 
       <div className="p-5 flex-grow">
-        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-md">{description}</p>
+        <p className="text-gray-700 dark:text-gray-200 text-sm md:text-md">{description}</p>
       </div>
 
       <div className="p-5 duration-300">
         <Link
           href={`/tools/${categoryId}`}
-          className="flex items-center gap-2 text-purple-600 font-medium text-sm hover:text-purple-800 transition-colors"
+          className="flex items-center justify-end gap-2 hover:mx-2 text-purple-600 dark:text-purple-100 font-medium text-sm md:text-md dark:hover:text-purple-400 hover:text-purple-800 transition-all duration-400"
         >
           Explore {name}
           <ArrowRight size={16} />

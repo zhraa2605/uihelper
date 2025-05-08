@@ -28,12 +28,13 @@
   --color-muted-text:#6b7280;
   --color-dark-color:#06091f;
   
+  
 
   
 
 }
 @layer base {
   html {
-    @apply   dark:bg-[#06091f] dark:text-gray-50;
+    @apply   dark:bg-dark-color dark:text-gray-50;
 }
 }

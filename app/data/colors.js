@@ -81,6 +81,8 @@ const originalColorTools = [
     installationType: "copy-paste",
     isFree: true
   }
+
+  // tailcolors
 ];
 
   
