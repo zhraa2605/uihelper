@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Hero from './components/Hero';
 import CategoryGrid from './components/CategoryGrid';
 import Footer from './components/Footer';
@@ -7,6 +7,7 @@ const page = () => {
   return (
     <>
     
+
     <Hero />
     <CategoryGrid />
     <Footer />

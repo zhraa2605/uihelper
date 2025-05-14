@@ -38,7 +38,7 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
   };
 
   return (
-    <div className="rounded-2xl overflow-hidden shadow-md border border-white/[0.1] flex flex-col h-full dark:bg-[#00020F]">
+    <div className="rounded-2xl overflow-hidden shadow-xl dark:shadow-lg dark:shadow-gray-700 border border-gray-200 dark:border-gray-700  flex flex-col h-full dark:bg-[#00020F]">
       <div className="relative h-56 w-full overflow-hidden">
         <img
           src={image}

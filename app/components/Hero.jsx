@@ -30,3 +30,27 @@ Kitstack — UI Tools for Developers           </h1>
 };
 
 export default Hero;
+
+
+// 'use client';
+
+// import { changeLanguage } from '@/app/lib/changeLanguage';
+// import { useTranslation } from 'react-i18next';
+
+// export default function LanguageSwitcher() {
+//   const { i18n } = useTranslation();
+
+//   return (
+//     <div>
+//       <h2>Language Switcher</h2>
+//       <h1>{i18n.t('welcome')}</h1>
+//       <button onClick={() => changeLanguage('en')} disabled={i18n.language === 'en'}>
+//         English
+//       </button>
+//       <button onClick={() => changeLanguage('ar')} disabled={i18n.language === 'ar'}>
+//         عربي
+//       </button>
+//     </div>
+//   );
+// }
+

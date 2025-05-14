@@ -5,6 +5,8 @@ import { fontTools} from "@/app/data/fonts"; // You must export this from your f
 import { iconTools } from "@/app/data/icons";
 import { animationTools } from "@/app/data/animation"; // You must export this from your file
 import { logoMakers } from "@/app/data/logos";
+
+
 const categoryMap = {
 
   components: {
@@ -39,7 +41,41 @@ const categoryMap = {
   },
 };
 
+export async function generateMetadata({ params }) {
+  const { categoryId } = params;
+  const category = categoryMap[categoryId];
+
+  if (!category) {
+    return {
+      title: "Unknown Category - UIHelper",
+      description: `No metadata available for category: ${categoryId}`,
+    };
+  }
+  return {
+    title: `${category.title} - UIHelper`,
+    description: category.subtitle,
+    openGraph: {
+      title: `${category.title} | UIHelper`,
+      description: category.subtitle,
+      url: `https://uihelper.dev/tools/${categoryId}`,
+      siteName: "UIHelper",
+      images: [
+        {
+          url: `/og/${categoryId}.png`, 
+          width: 1200,
+          height: 630,
+          alt: `${category.title} Tools`,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+  };
+}
+
 const ToolsPage = async ({ params }) => {
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // ⏱️ 2 seconds delay
+
   const { categoryId } = await params;
   const category = categoryMap[categoryId];
   console.log("Current categoryId:", categoryId);
