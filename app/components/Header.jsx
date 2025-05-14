@@ -2,15 +2,22 @@
 
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import { LoaderPinwheel } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className=" p-4 shadow-md w-full z-10">
+    <header className=" p-4 border-b border-gray-100 dark:border-gray-700 shadow-sm w-full z-10">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo or Brand Name */}
-        <Link href="/" className="text-2xl font-bold text-gray-900  dark:text-white">
-          UIHelper
+
+        <div className="flex items-center gap-1.5 text-color-6 dark:text-white">
+          <LoaderPinwheel strokeWidth={1.25} size={28} />
+        <Link href="/" className="text-2xl  font-semibold tracking-wider ">
+            Kitstack
         </Link>
+
+        </div>
+
 
         {/* Optional: Short Tagline or Description */}
         <ThemeToggle />

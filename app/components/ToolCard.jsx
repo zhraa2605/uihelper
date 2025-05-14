@@ -29,9 +29,9 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
       case "required":
         return "Installation Required";
       case "optional":
-        return "Choose to Install or Copy Code";
+        return "Choose to Install or Copy/Paste";
       case "copy-paste":
-        return "Copy/Paste Code";
+        return "Copy/Paste ";
       default:
         return "Unknown";
     }
