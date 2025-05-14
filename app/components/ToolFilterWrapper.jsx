@@ -52,7 +52,7 @@ const ToolFilterWrapper = ({ tools }) => {
 
       {/* Collapsible Filter Section */}
       {isOpen && (
-        <div className="bg-purple-100 dark:bg-gray-800/50 p-4 rounded-xl shadow-sm">
+        <div className="bg-purple-50 dark:bg-gray-800/50 p-4 rounded-xl shadow-sm">
           <div className="flex flex-wrap gap-2 ">
             {allTags.map(tag => (
               <button
