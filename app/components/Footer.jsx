@@ -14,7 +14,7 @@ export default function Footer() {
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset after 2s
+    setTimeout(() => setCopied(false), 2000); 
   };
 
   return (

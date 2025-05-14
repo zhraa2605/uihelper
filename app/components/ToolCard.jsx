@@ -6,11 +6,9 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
   const [requiresInstallation, setRequiresInstallation] = useState(false);
   
   useEffect(() => {
-    // Check if installation is required
     setRequiresInstallation(installationType === "required" || installationType === "optional");
   }, [installationType]);
 
-  // Render appropriate icon based on installation type
   const renderIcon = () => {
     switch (installationType) {
       case "required":
@@ -48,28 +46,22 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
       </div>
 
       <div className="p-5 text-black dark:text-white flex flex-col flex-1">
-        {/* Card content wrapper - takes all available space */}
         <div className="flex flex-col flex-1">
-          {/* Title and desc */}
           <div className="flex justify-between items-center mb-3">
             <h2 className="text-xl font-bold text-gray-800 dark:text-gray-50">{name}</h2>
           </div>
           
-          {/* Description with overflow handling */}
           <div className="flex-1 overflow-auto">
             <p className="text-md text-gray-800 dark:text-gray-100 mt-2">{description}</p>
           </div>
           
-          {/* Installation type - part of the footer */}
           <div className="flex items-center text-sm text-gray-500 dark:text-gray-200 mt-4">
             {renderIcon()}
             <span>{renderText()}</span>
           </div>
         </div>
 
-        {/* Footer section - always at the bottom */}
         <div className="flex items-center justify-between mt-6 pt-4 ">
-          {/* Tech icons */}
           <div className="flex items-center transition-all duration-400 gap-0 hover:gap-1">
             {(tech || []).map((t, i) => (
               <div
@@ -81,7 +73,6 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
             ))}
           </div>
 
-          {/* Link to website */}
           <a
   href={url}
   target="_blank"

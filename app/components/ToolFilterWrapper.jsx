@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { ChevronUp , ChevronDown } from 'lucide-react'; // Importing arrow icons
+import { ChevronUp , ChevronDown } from 'lucide-react'; 
 import ToolsGrid from './ToolGrid';
 
 const ToolFilterWrapper = ({ tools }) => {
   const [selectedTags, setSelectedTags] = useState([]);
-  const [isOpen, setIsOpen] = useState(false); // State for toggling filter visibility
+  const [isOpen, setIsOpen] = useState(false); 
   
   const allTags = useMemo(() => {
     const tagSet = new Set();
@@ -30,10 +30,9 @@ const ToolFilterWrapper = ({ tools }) => {
 
   return (
     <div className="space-y-8">
-      {/* Filter Section Header with Arrow */}
     <div
   className="cursor-pointer flex items-center justify-between p-5 mb-9 border-b border-gray-400 dark:border-gray-700"
-  onClick={() => setIsOpen(!isOpen)} // Toggle open/close state
+  onClick={() => setIsOpen(!isOpen)} 
 >
   <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">
     Filter by Tags
@@ -50,7 +49,6 @@ const ToolFilterWrapper = ({ tools }) => {
   )}
 </div>
 
-      {/* Collapsible Filter Section */}
       {isOpen && (
         <div className="bg-purple-50 dark:bg-gray-800/50 p-4 rounded-xl shadow-sm">
           <div className="flex flex-wrap gap-2 ">
@@ -83,10 +81,8 @@ const ToolFilterWrapper = ({ tools }) => {
         </div>
       )}
       
-      {/* Results count */}
     
 
-      {/* Tools grid remains unchanged */}
       <ToolsGrid data={filteredTools} />
     </div>
   );

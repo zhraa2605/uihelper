@@ -1,5 +1,4 @@
-// ToolsGrid.tsx - Client Component
-'use client'; // Make sure this is declared for client-side rendering
+'use client';
 
 import LibraryCard from "@/app/components/ToolCard";
 

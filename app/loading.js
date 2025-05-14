@@ -1,6 +1,5 @@
 import React from "react";
 
-// Simple purple spinning circle loader
 const Loading = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">

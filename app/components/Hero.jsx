@@ -4,14 +4,12 @@ import { InteractiveGridPattern } from "./SVGComponent";
 const Hero = () => {
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden  transition-colors duration-300">
-      {/* Background SVG inside and behind */}
       <div className="absolute inset-0 z-0">
         <InteractiveGridPattern />
       </div>
       
 
       
-      {/* Foreground content */}
       <div className="container relative z-10 mx-auto text-center px-4 md:px-8 max-w-[89vw] md:max-w-2xl lg:max-w-[60vw]">
         <div className="max-w-3xl mx-auto">
           <p className="text-md md:text-xl text-gray-600 dark:text-gray-100 leading-snug tracking-wide font-extralight">

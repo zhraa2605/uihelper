@@ -7,7 +7,6 @@ export default function ThemeToggle() {
   const [isSpinning, setIsSpinning] = useState(false);
   
   useEffect(() => {
-    // On mount - get saved theme or system preference
     const saved = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initial = saved || (prefersDark ? 'dark' : 'light');
@@ -18,18 +17,16 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     setIsSpinning(true);
     
-    // Wait for spin animation to reach halfway before changing the theme
     setTimeout(() => {
       const nextTheme = theme === 'dark' ? 'light' : 'dark';
       setTheme(nextTheme);
       document.documentElement.classList.toggle('dark', nextTheme === 'dark');
       localStorage.setItem('theme', nextTheme);
-    }, 300); // Half of the animation duration
+    }, 300); 
     
-    // Reset spinning state after animation completes
     setTimeout(() => {
       setIsSpinning(false);
-    }, 600); // Full animation duration
+    }, 600); 
   };
   
   return (
