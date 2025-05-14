@@ -10,7 +10,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo or Brand Name */}
 
-        <div className="flex items-center gap-1.5 text-color-6 dark:text-white">
+        <div className="flex items-center gap-1.5 text-color-4 dark:text-white">
           <LoaderPinwheel strokeWidth={1.25} size={28} />
         <Link href="/" className="text-2xl  font-semibold tracking-wider ">
             Kitstack
