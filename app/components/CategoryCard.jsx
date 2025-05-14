@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -19,7 +18,7 @@ const CategoryCard = ({ categoryId, name, description, icon }) => {
       <div className="p-5 duration-300">
         <Link
           href={`/tools/${categoryId}`}
-          className="flex items-center justify-end gap-2 hover:mx-2 text-purple-600 dark:text-purple-100 font-medium text-sm md:text-md dark:hover:text-purple-400 hover:text-purple-800 transition-all duration-400"
+          className="flex items-center justify-end gap-2 hover:mx-2 active:mx-2 text-purple-600 dark:text-purple-100 font-medium text-sm md:text-md dark:hover:text-purple-400 hover:text-purple-800 dark:active:text-purple-400 active:text-purple-800 transition-all duration-400"
         >
           Explore {name}
           <ArrowRight size={16} />

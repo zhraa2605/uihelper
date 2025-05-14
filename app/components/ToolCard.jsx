@@ -62,7 +62,7 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
         </div>
 
         <div className="flex items-center justify-between mt-6 pt-4 ">
-          <div className="flex items-center transition-all duration-400 gap-0 hover:gap-1">
+          <div className="flex items-center transition-all duration-400 gap-0 hover:gap-1 active:gap-1">
             {(tech || []).map((t, i) => (
               <div
                 key={i}

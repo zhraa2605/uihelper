@@ -59,7 +59,7 @@ const ToolFilterWrapper = ({ tools }) => {
                 className={`px-3.5 py-1.5 rounded-full border text-sm font-normal transition-all duration-200 ${
                   selectedTags.includes(tag)
                     ? 'bg-purple-600 border-purple-700 text-white shadow-md'
-                    : 'bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600'
+                    : 'bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 active:bg-gray-100 dark:active:bg-gray-600' 
                 }`}
               >
                 {tag}
@@ -72,7 +72,7 @@ const ToolFilterWrapper = ({ tools }) => {
 
               <button
                 onClick={() => setSelectedTags([])}
-                className="text-sm text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 font-medium flex items-center"
+                className="text-sm text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 active:text-red-800 dark:active:text-red-300 font-medium flex items-center"
               >
                 <span>Clear All</span>
               </button>
