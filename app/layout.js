@@ -11,14 +11,14 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "UI Helper - Build Better UI Faster",
+  title: "Kitstack - Build Better UI Faster",
   description:
-    "UI Helper is your go-to resource for UI tools, libraries, and inspiration. Perfect for developers who want to design smarter, not harder.",
+    "Kitstack is your go-to resource for UI tools, libraries, and inspiration. Perfect for developers who want to design smarter, not harder.",
   keywords:
     "UI tools, UI libraries, frontend design, Tailwind CSS, React components, color palettes, icons, animations, logo makers",
-  author: "UI Helper Team",
-  url: "https://uihelper.dev",
-  image: "https://uihelper.dev/images/og-image.png",
+  author: "Kitstack Team",
+  url: "https://Kitstack.dev",
+  image: "https://Kitstack.dev/images/og-image.png",
 };
 
 export default function RootLayout({ children }) {

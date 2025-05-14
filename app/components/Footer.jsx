@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const email = "hello@uihelper.dev";
+  const email = "hello@kitstack.dev";
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

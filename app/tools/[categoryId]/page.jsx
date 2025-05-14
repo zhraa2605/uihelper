@@ -23,17 +23,17 @@ export async function generateMetadata({ params }) {
   const category = categoryMap[categoryId];
 
   if (!category) {
-    return { title: "Unknown Category - UIHelper", description: `No metadata available for category: ${categoryId}` };
+    return { title: "Unknown Category - Kitstack", description: `No metadata available for category: ${categoryId}` };
   }
 
   return {
-    title: `${category.title} - UIHelper`,
+    title: `${category.title} - Kitstack`,
     description: category.subtitle,
     openGraph: {
-      title: `${category.title} | UIHelper`,
+      title: `${category.title} | Kitstack`,
       description: category.subtitle,
-      url: `https://uihelper.dev/tools/${categoryId}`,
-      siteName: "UIHelper",
+      url: `https://Kitstack.dev/tools/${categoryId}`,
+      siteName: "Kitstack",
       images: [{ url: `/og/${categoryId}.png`, width: 1200, height: 630, alt: `${category.title} Tools` }],
       locale: "en_US",
       type: "website",
