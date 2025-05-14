@@ -18,8 +18,7 @@ const Hero = () => {
             Design smarter, not harder.
           </p>
           <h1 className="text-3xl md:text-6xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 via-purple-600 to-purple-900 dark:bg-gradient-to-bl dark:from-purple-100 dark:to-purple-200  mb-3 leading-snug tracking-wide">
-            UI Helper — UI Help for Non-Designers
-          </h1>
+Kitstack — UI Tools for Developers           </h1>
           <p className="text-md md:text-lg lg:text-xl text-gray-600 dark:text-gray-100 mb-8 leading-snug tracking-wide font-extralight">
             Because not every frontend dev is a pixel-perfect designer. <br className="hidden md:block" />
             Here's your cheat sheet to look like one.
