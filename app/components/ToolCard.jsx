@@ -83,13 +83,16 @@ const LibraryCard = ({ name, description, url, image, tech, installationType }) 
 
           {/* Link to website */}
           <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-gray-800 dark:text-gray-200 hover:text-purple-900 dark:hover:text-purple-300 hover:me-2 duration-300 text-sm"
-          >
-            Check Site <MoveRight className="h-4 w-4 ms-2" />
-          </a>
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center text-gray-800 dark:text-gray-200 
+             hover:text-purple-900 dark:hover:text-purple-300 
+             active:text-purple-900 dark:active:text-purple-300 
+             hover:me-2 active:me-2 duration-300 text-sm"
+>
+  Check Site <MoveRight className="h-4 w-4 ms-2" />
+</a>
         </div>
       </div>
     </div>
