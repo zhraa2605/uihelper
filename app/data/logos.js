@@ -7,6 +7,7 @@ const originallogoMakers = [
     image: "/images/logo_com.png", 
     tech: [{ name: "Web App", icon: "/icons/web.svg" }],
     installationType: "copy-paste",
+    tags: ["Free"]
   },
   {
     name: "Hatchful by Shopify",
@@ -16,6 +17,7 @@ const originallogoMakers = [
     image: "/images/hatchful.png",
     tech: [{ name: "Web App", icon: "/icons/web.svg" }],
     installationType: "copy-paste",
+    tags: ["Free"]
   },
   {
     name: "Namecheap Logo Maker",
@@ -28,6 +30,7 @@ const originallogoMakers = [
       { name: "Web App", icon: "/icons/web.svg" },
     ],
     installationType: "copy-paste",
+    tags: ["Free"]
   },
   {
     name: "Canva Logo Maker",
@@ -37,6 +40,7 @@ const originallogoMakers = [
     image: "/images/canva.png",
     tech: [{ name: "Web App", icon: "/icons/web.svg" }],
     installationType: "optional",
+    tags: ["Free", "Premium Features"]
   },
   {
     name: "DesignEvo",
@@ -49,6 +53,7 @@ const originallogoMakers = [
       { name: "SVG", icon: "/icons/svg.svg" },
     ],
     installationType: "copy-paste",
+    tags: ["Free", "Attribution Required"]
   },
   {
     name: "Ucraft Logo Maker",
@@ -61,6 +66,7 @@ const originallogoMakers = [
       { name: "Web App", icon: "/icons/web.svg" },
     ],
     installationType: "copy-paste",
+    tags: ["Free"]
   },
   {
     name: "Zyro Logo Maker",
@@ -70,6 +76,7 @@ const originallogoMakers = [
     image: "/images/zyro.png",
     tech: [{ name: "Web App", icon: "/icons/web.svg" }],
     installationType: "copy-paste",
+    tags: ["Free"]
   },
 ];
 

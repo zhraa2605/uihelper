@@ -43,11 +43,15 @@ const originalComponentLibraries = [
     url: "https://hyperui.dev/",
     image: "/images/hyper.png",
     tech: [
-      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
+      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
+      { name: 'Next.js', icon: '/icons/next.svg' },
+      { name: "React", icon: "/icons/react.svg" },
+      { name: "Vue", icon: "/icons/vue.svg" },
+
     ],
     installationType: "copy-paste",
     isFree: true,
-    tags: ["Tailwind CSS", "Copy-Paste", "Free"]
+    tags: ["Tailwind CSS", "Copy-Paste", "Free" , "Next.js", "React", "Vue" ]
   },
   {
     name: "Uiverse",
@@ -55,6 +59,7 @@ const originalComponentLibraries = [
     url: "https://uiverse.io/",
     image: "/images/universe.png",
     tech: [
+      { name: "HTML", icon: "/icons/html.svg" },
       { name: "CSS", icon: "/icons/css.svg" },
       { name: "Tailwind CSS", icon: "/icons/tailwind.svg" }
     ],
@@ -98,6 +103,7 @@ const originalComponentLibraries = [
       { name: "HTML", icon: "/icons/html.svg" },
       { name: "CSS", icon: "/icons/css.svg" },
       { name: "JavaScript", icon: "/icons/javascript.svg" }
+
     ],
     installationType: "copy-paste",
     isFree: true,

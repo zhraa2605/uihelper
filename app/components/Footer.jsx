@@ -8,13 +8,13 @@ import clsx from "clsx";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const email = "hello@uihelper.dev";
+  const email = "hello@kitstack.dev";
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset after 2s
+    setTimeout(() => setCopied(false), 2000); 
   };
 
   return (
@@ -53,7 +53,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 dark:border-gray-200 w-full pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-gray-400 dark:text-gray-100 mb-4 md:mb-0 text-xs md:text-md">
-            © {year} UI Helper — Crafted for devs who love clean UI.
+            © {year} Kitstack — Crafted for devs who love clean UI.
           </p>
 
           

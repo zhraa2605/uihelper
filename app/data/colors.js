@@ -1,4 +1,3 @@
-
 const originalColorTools = [
   {
     name: "SheCodes Color Palettes",
@@ -6,7 +5,7 @@ const originalColorTools = [
     url: "https://www.shecodes.io/color-palettes",
     image: "/images/shecodes.png",
     installationType: "copy-paste",
-    tags: ["Free"],
+    tags: ["Free", "Palette Generation", "UI Design"],
     isFree: true
   },
   {
@@ -15,6 +14,7 @@ const originalColorTools = [
     url: "https://colorhunt.co/",
     image: "/images/colorhunt.png",
     installationType: "copy-paste",
+    tags: ["Free", "Palette Generation", "UI Design"],
     isFree: true
   },
   {
@@ -23,6 +23,7 @@ const originalColorTools = [
     url: "https://uicolors.app/",
     image: "/images/uicolors.png",
     installationType: "copy-paste",
+    tags: ["Free", "UI Design", "Accessibility"],
     isFree: true
   },
   {
@@ -31,6 +32,7 @@ const originalColorTools = [
     url: "https://coolors.co/",
     image: "/images/coolors.png",
     installationType: "copy-paste",
+    tags: ["Free", "Palette Generation", "UI Design"],
     isFree: true
   },
   {
@@ -39,6 +41,7 @@ const originalColorTools = [
     url: "http://khroma.co/",
     image: "/images/khroma.png",
     installationType: "copy-paste",
+    tags: ["Free", "Palette Generation", "UI Design"],
     isFree: true
   },
   {
@@ -47,6 +50,7 @@ const originalColorTools = [
     url: "https://cssgradient.io/",
     image: "/images/cssgradient.png",
     installationType: "copy-paste",
+    tags: ["Free", "Gradient", "UI Design"],
     isFree: true
   },
   {
@@ -55,6 +59,7 @@ const originalColorTools = [
     url: "https://mycolor.space/",
     image: "/images/mycolorspace.png",
     installationType: "copy-paste",
+    tags: ["Free", "Gradient", "Palette Generation", "UI Design"],
     isFree: true
   },
   {
@@ -63,6 +68,7 @@ const originalColorTools = [
     url: "https://www.happyhues.co/",
     image: "/images/happyhues.png",
     installationType: "copy-paste",
+    tags: ["Free", "UI Design"],
     isFree: true
   },
   {
@@ -71,6 +77,7 @@ const originalColorTools = [
     url: "https://colors.eva.design/",
     image: "/images/evacolors.png",
     installationType: "copy-paste",
+    tags: ["Free", "Palette Generation", "Accessibility", "UI Design"],
     isFree: true
   },
   {
@@ -79,15 +86,12 @@ const originalColorTools = [
     url: "https://javisperez.github.io/tailwindcolorshades/",
     image: "/images/tailwindshades.png",
     installationType: "copy-paste",
+    tags: ["Free", "Palette Generation", "UI Design"],
     isFree: true
   }
-
-  // tailcolors
 ];
 
-  
-  export const colorTools = originalColorTools.map(tool => ({
-    ...tool,
-    categoryId: "colors"
-  }));
-  
+export const colorTools = originalColorTools.map(tool => ({
+  ...tool,
+  categoryId: "colors"
+}));

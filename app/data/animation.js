@@ -9,6 +9,7 @@ const originalAnimationTools = [
       { name: "JavaScript", icon: "/icons/javascript.svg" }
     ],
     installationType: "required",
+    tags: ["React", "JavaScript", "Required Install", "Free"]
   },
   {
     name: "Animate.css",
@@ -19,6 +20,7 @@ const originalAnimationTools = [
       { name: "CSS", icon: "/icons/css.svg" }
     ],
     installationType: "copy-paste",
+    tags: ["CSS", "Copy-Paste", "Free"]
   },
   {
     name: "LottieFiles",
@@ -26,9 +28,10 @@ const originalAnimationTools = [
     url: "https://lottiefiles.com",
     image: "/images/lottie-files.png",
     tech: [
-      { name: "JavaScript", icon: "/icons/javascript.svg" },
+      { name: "JavaScript", icon: "/icons/javascript.svg" }
     ],
     installationType: "optional",
+    tags: ["JavaScript", "Optional Install", "Free"]
   },
   {
     name: "GSAP (GreenSock)",
@@ -39,6 +42,7 @@ const originalAnimationTools = [
       { name: "JavaScript", icon: "/icons/javascript.svg" }
     ],
     installationType: "required",
+    tags: ["JavaScript", "Required Install", "Free"]
   },
   {
     name: "Motion One",
@@ -49,6 +53,7 @@ const originalAnimationTools = [
       { name: "JavaScript", icon: "/icons/javascript.svg" }
     ],
     installationType: "required",
+    tags: ["JavaScript", "Required Install", "Free"]
   },
   {
     name: "AutoAnimate",
@@ -59,6 +64,7 @@ const originalAnimationTools = [
       { name: "JavaScript", icon: "/icons/javascript.svg" }
     ],
     installationType: "optional",
+    tags: ["JavaScript", "Optional Install", "Free"]
   },
   {
     name: "CSShake",
@@ -69,6 +75,7 @@ const originalAnimationTools = [
       { name: "CSS", icon: "/icons/css.svg" }
     ],
     installationType: "copy-paste",
+    tags: ["CSS", "Copy-Paste", "Free"]
   },
   {
     name: "Animista",
@@ -79,6 +86,7 @@ const originalAnimationTools = [
       { name: "CSS", icon: "/icons/css.svg" }
     ],
     installationType: "copy-paste",
+    tags: ["CSS", "Copy-Paste", "Free"]
   },
   {
     name: "Hover.css",
@@ -89,6 +97,7 @@ const originalAnimationTools = [
       { name: "CSS", icon: "/icons/css.svg" }
     ],
     installationType: "copy-paste",
+    tags: ["CSS", "Copy-Paste", "Free"]
   },
   {
     name: "Magic Animations",
@@ -99,11 +108,11 @@ const originalAnimationTools = [
       { name: "CSS", icon: "/icons/css.svg" }
     ],
     installationType: "copy-paste",
+    tags: ["CSS", "Copy-Paste", "Free"]
   }
 ];
 
-
 export const animationTools = originalAnimationTools.map(tool => ({
-    ...tool,
-    categoryId: "animations"
-  }));
+  ...tool,
+  categoryId: "animations"
+}));
