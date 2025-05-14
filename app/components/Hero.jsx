@@ -17,7 +17,7 @@ const Hero = () => {
           <p className="text-md md:text-xl text-gray-600 dark:text-gray-100 leading-snug tracking-wide font-extralight">
             Design smarter, not harder.
           </p>
-          <h1 className="text-3xl md:text-6xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 via-purple-600 to-purple-900 dark:bg-gradient-to-bl dark:from-purple-100 dark:to-purple-200  mb-3 leading-snug tracking-wide">
+          <h1 className="text-3xl md:text-6xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 via-purple-600 to-purple-800 dark:bg-gradient-to-bl dark:from-purple-100 dark:to-purple-200  mb-3 leading-snug tracking-wide">
 Kitstack — UI Tools for Developers           </h1>
           <p className="text-md md:text-lg lg:text-xl text-gray-600 dark:text-gray-100 mb-8 leading-snug tracking-wide font-extralight">
             Because not every frontend dev is a pixel-perfect designer. <br className="hidden md:block" />
@@ -30,27 +30,3 @@ Kitstack — UI Tools for Developers           </h1>
 };
 
 export default Hero;
-
-
-// 'use client';
-
-// import { changeLanguage } from '@/app/lib/changeLanguage';
-// import { useTranslation } from 'react-i18next';
-
-// export default function LanguageSwitcher() {
-//   const { i18n } = useTranslation();
-
-//   return (
-//     <div>
-//       <h2>Language Switcher</h2>
-//       <h1>{i18n.t('welcome')}</h1>
-//       <button onClick={() => changeLanguage('en')} disabled={i18n.language === 'en'}>
-//         English
-//       </button>
-//       <button onClick={() => changeLanguage('ar')} disabled={i18n.language === 'ar'}>
-//         عربي
-//       </button>
-//     </div>
-//   );
-// }
-
